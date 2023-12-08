@@ -1,0 +1,20 @@
+<!-- ratings/brewery_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ brewery.name }} Detail</title>
+</head>
+<body>
+    <h1>{{ brewery.name }} Detail</h1>
+    
+    <p>Location: {{ brewery.location }}</p>
+    <p>Description: {{ brewery.description }}</p>
+    
+    <!-- Add more information as needed -->
+
+    <a href="{% url 'ratings:index' %}">Back to Ratings</a>
+</body>
+</html>

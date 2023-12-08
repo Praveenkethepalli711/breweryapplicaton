@@ -1,0 +1,29 @@
+<!-- ratings/templates/ratings/add_rating.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Rating</title>
+</head>
+<body>
+
+  <h2>Add Rating for {{ brewery.phone }}</h2>
+
+  <form method="post" action="{% url 'add_rating' brewery.phone %}">
+    {% csrf_token %}
+    
+    <!-- Render form fields individually with placeholders -->
+    <label for="{{ form.stars.id_for_label }}">Stars:</label>
+    {{ form.stars }}
+    
+    <label for="{{ form.comment.id_for_label }}">Comment:</label>
+    {{ form.comment }}
+    
+    <button type="submit">Submit Rating</button>
+  </form>
+
+  <br>
+
+  <a href="{% url 'ratings' %}">Back to Ratings</a>
+
+</body>
+</html>
