@@ -8,7 +8,7 @@ from . import views
 urlpatterns = [
     #path('', views.home, name='home'),
     path('brewery_list/', views.brewery_list, name='brewery_list'),  # Add this line for the root path
-    path('brewery_search/', views.brewery_search, name='brewery_search'),
+    
     path('brewery_detail/<uuid:brewery_id>/', views.brewery_detail, name='brewery_detail'),
     path('add_rating/<uuid:brewery_id>/', views.add_rating, name='add_rating'),
     path('delete_rating/<int:rating_id>/', DeleteRatingView.as_view(), name='delete_rating'),
